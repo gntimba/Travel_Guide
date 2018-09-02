@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BB261E21"
+    android:layout_weight="100">
+
+
+    <ImageView
+        android:id="@+id/ima"
+        android:layout_width="wrap_content"
+        android:layout_height="89dp"
+        android:layout_weight="66.49"
+        app:srcCompat="@mipmap/home_96px" />
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="14.56"
+        android:orientation="vertical">
+        android:layout_weight="33.3"
+
+        <TextView
+            android:id="@+id/PlaceNames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/stradd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Street Address"
+            android:textColor="@color/white"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/subP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Suburb"
+            android:textColor="@color/white"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/codeP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="Postal Code"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/distanceP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Distance"
+            android:textColor="@color/white"
+            android:textAlignment="center" />
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Price"
+            android:textColor="@color/white"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

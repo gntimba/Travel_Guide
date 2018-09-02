@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:uber="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_background1"
+    android:layout_weight="100"
+    android:weightSum="1">
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="48dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="300dp"
+        android:layout_weight="0.45"
+        android:onClick="profile"
+        app:srcCompat="@mipmap/user_96px" />
+
+    <ImageView
+        android:id="@+id/imageDetails"
+        android:layout_width="match_parent"
+        android:layout_height="244dp"
+        android:layout_weight="0.17"
+        app:srcCompat="@mipmap/home_96px" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="48dp"
+            android:layout_height="42dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/star_button"
+            android:layout_weight="0.45"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/mapView"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/count"
+            android:layout_weight="0.17"
+            android:background="@drawable/map"
+            android:onClick="OnMapView"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/review"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/mapView"
+            android:layout_weight="0.17"
+            android:background="@drawable/review"
+            android:onClick="OnReview"
+            android:textColor="@color/white" />
+
+        <com.like.LikeButton
+            android:id="@+id/star_button"
+            android:layout_width="48dp"
+            android:layout_height="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:icon_size="25dp"
+            app:icon_type="heart">
+
+        </com.like.LikeButton>
+
+        <Button
+            android:id="@+id/btnComent"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/review"
+            android:background="@mipmap/ic_cooment"
+            android:onClick="OnComments" />
+
+        <Button
+            android:id="@+id/btnAddList"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnComent"
+            android:layout_toEndOf="@+id/btnComent"
+            android:background="@mipmap/add_list"
+            android:onClick="OnAddList" />
+
+        <Button
+            android:id="@+id/todolist"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnAddList"
+            android:background="@mipmap/todolist"
+            android:onClick="list" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="117dp"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/pNmae"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.99"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/sAdr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.00"
+            android:text="Street Address"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/sSub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.00"
+            android:text="Suburb"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/pPostal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.00"
+            android:text="Postal Code"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/distanceP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.00"
+            android:text="Distance"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/Pri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.00"
+            android:text="Distance"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</LinearLayout>

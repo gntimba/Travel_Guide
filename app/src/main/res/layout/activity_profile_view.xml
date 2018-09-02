@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="fill_parent"
+    android:background="@mipmap/ic_background"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:padding="10dp"
+              android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.20">
+
+                <ImageView
+                    android:id="@+id/pp_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    app:srcCompat="@mipmap/ic_default_pp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+
+                android:layout_marginTop="20dp"
+                android:background="@color/colorAccent"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_email"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+
+                android:layout_marginTop="12dp"
+                android:background="@color/colorAccent"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_question"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+
+                android:layout_marginTop="12dp"
+                android:background="@color/colorAccent"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_answer"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+
+                android:layout_marginTop="12dp"
+                android:background="@color/colorAccent"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

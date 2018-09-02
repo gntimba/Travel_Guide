@@ -1,0 +1,37 @@
+<RelativeLayout
+    andriod:layout_height="match_parent"
+    andriod:layout_width="match_parent"
+    xmlns:andriod="http://schemas.android.com/apk/res/android">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        tools:context="com.ttguide.touristtravelguide.MapsActivity"
+        android:layout_below="@+id/TF_location" />
+
+    <EditText
+        andriod:id="@+id/TF_location"
+        andriod:layout_width="300dp"
+        andriod:layout_height="wrap_content"
+        andriod:ems="10"
+        andriod:inputType="textPersonName"
+        andriod:layout_alignParentTop="true"
+        andriod:layout_alignParentStart="true"
+        andriod:layout_toStartOf="@+id/B_search" />
+
+    <Button
+        andriod:id="@+id/B_search"
+        andriod:layout_width="wrap_content"
+        andriod:layout_height="wrap_content"
+        andriod:onClick="onClick"
+        andriod:text="Search"
+        andriod:layout_alignBottom="@+id/TF_location"
+        andriod:layout_alignParentEnd="true" />
+
+</RelativeLayout>

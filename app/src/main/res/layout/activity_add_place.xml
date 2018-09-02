@@ -1,0 +1,269 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@mipmap/ic_background"
+    android:onClick="hideKeyboard"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="hideKeyboard">
+    <TableLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="40dp"
+        android:background="@color/input_login_hint"
+        android:orientation="horizontal">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:background="@color/input_login_hint">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="Administrator"
+                android:layout_column="0"
+                android:layout_weight="1" />
+
+
+            <TextView
+                android:id="@+id/admi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Admin"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:singleLine="false" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:text="Select Client" />
+
+
+            <Spinner
+                android:id="@+id/my_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:singleLine="false" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/input_login_hint">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+
+                android:layout_weight="1"
+                android:text="Price" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:inputType="numberDecimal"
+                android:singleLine="false" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Place Name"
+                android:layout_column="0"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/PlaceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:singleLine="false" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/input_login_hint">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latitude"
+                android:layout_column="0"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/latID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:text="Latitude" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/input_login_hint">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:text="Longitude" />
+
+            <TextView
+                android:id="@+id/lonID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:text="Longitude" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Street"
+                android:layout_column="0"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/Street"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:singleLine="false" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/input_login_hint">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suburb"
+            android:layout_column="0"
+            android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/suburb"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:inputType="none"
+                android:singleLine="false" />
+
+    </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:text="code" />
+
+            <EditText
+                android:id="@+id/code"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:maxLength="4"
+                android:singleLine="false" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|center_horizontal"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button"
+                android:text="Request Location"
+                android:textColor="@color/white"
+                android:background="#ea4c88"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|center_horizontal"
+            >
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/pic"
+                android:src="@mipmap/home_96px"
+                android:onClick="ViewPicture"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:gravity="center_vertical|center_horizontal"
+            >
+
+            <Button
+                android:id="@+id/regin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button"
+                android:onClick="add"
+                android:text="Add Place"
+                android:textColor="@color/white" />
+        </TableRow>
+
+
+
+    </TableLayout>
+    </ScrollView>
+</LinearLayout>

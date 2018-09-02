@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Travel Guide</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="hint_Question">Security Question</string>
+    <string name="hint_Answer">Security Answer </string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="welcome">Welcome</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="name">Fullname</string>
+    <string-array name="names">
+        <item>Select a security question</item>
+        <item>What is your favourite colour?</item>
+        <item>What is the name of your first school?</item>
+        <item>What is your maiden name?</item>
+        <item>What is the name of your pet?</item>
+    </string-array>
+    <string-array name="sex">
+        <item>Select gender</item>
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_to_do_list_main">to_do_list_main</string>
+</resources>

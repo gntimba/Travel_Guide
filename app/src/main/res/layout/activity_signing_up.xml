@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="za.ac.tut.travel_guide.Customer.signing_up"
+    android:nestedScrollingEnabled="true"
+    android:isScrollContainer="true"
+    android:id="@+id/actSignup"
+    android:clickable="false"
+    android:background="@mipmap/ic_background"
+    android:focusableInTouchMode="false"
+    android:onClick="hideKeyboard"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BB261E21"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_fname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/et_email_address"
+                android:ems="10"
+                android:hint="First name"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/et_lname"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/et_email_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:ems="10"
+                android:focusedByDefault="true"
+                android:hint="Email Address"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/et_lname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/et_fname"
+                android:ems="10"
+                android:hint="Last name"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/et_c_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/et_password"
+                android:ems="10"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:scrollbars="vertical"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <Spinner
+                android:id="@+id/sp_security_q"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/sp_sex"
+                android:background="@color/lbl_name"
+                android:spinnerMode="dialog" />
+
+            <TextView
+                android:id="@+id/et_dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/et_c_password"
+                android:layout_toStartOf="@+id/btnSubmit"
+                android:ems="10"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/sp_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/et_dob"
+                android:background="@color/lbl_name"
+                android:spinnerMode="dialog" />
+
+            <ImageButton
+                android:id="@+id/btnDob"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignEnd="@+id/btnSubmit"
+                android:layout_below="@+id/et_password"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/transparent"
+                android:onClick="btnDatePicker"
+                app:srcCompat="@mipmap/calendarcu" />
+
+            <EditText
+                android:id="@+id/et_security_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/sp_security_q"
+                android:ems="10"
+                android:enabled="true"
+                android:hint="Security answer"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <ImageView
+                android:id="@+id/imageCust"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/et_security_a"
+                android:onClick="ViewPic"
+                app:srcCompat="@mipmap/ic_default_pp" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:keepScreenOn="false"
+                android:onClick="btnSubmit"
+                android:text="Submit"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:layout_below="@+id/imageCust"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
