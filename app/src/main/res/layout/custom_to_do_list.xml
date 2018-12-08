@@ -4,5 +4,7 @@
         android:id="@+id/chkTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
+
         android:checkMark="?android:attr/listChoiceIndicatorMultiple"
         android:text="" />

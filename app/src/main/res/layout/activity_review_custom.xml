@@ -9,6 +9,7 @@
     card_view:cardElevation="4dp"
     card_view:cardPreventCornerOverlap="true"
     card_view:cardUseCompatPadding="true"
+
     android:layout_marginBottom="10dp">
 <RelativeLayout
     xmlns:tools="http://schemas.android.com/tools"
