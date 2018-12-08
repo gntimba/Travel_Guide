@@ -10,6 +10,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -91,7 +93,8 @@ public class ListViewAdapter extends BaseAdapter {
 		Distance.setText(resultp.get("distance")+" km");
 		final String urlForImage = baseUrlForImage + resultp.get("imagename");
 
-		new DownloadImageTask(imageP).execute(urlForImage);
+		//new DownloadImageTask(imageP).execute(urlForImage);
+		Picasso.get().load(urlForImage).into(imageP);
 		// Capture ListView item click
 		itemView.setOnClickListener(new OnClickListener() {
 

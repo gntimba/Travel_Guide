@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -140,7 +142,8 @@ public class custProfile extends AppCompatActivity {
             dob.setText(pro.getDob());
             Created.setText(pro.getCreated());
             String urlForImage = baseUrlForImage + pro.getImage();
-            new DownloadImageTask(image).execute(urlForImage);
+           // new DownloadImageTask(image).execute(urlForImage);
+            Picasso.get().load(urlForImage).into(image);
         }
     }
     public void btnDatePicker(View view)

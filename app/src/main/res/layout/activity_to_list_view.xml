@@ -7,11 +7,15 @@
     android:background="@mipmap/ic_background1"
     tools:context="za.ac.tut.travel_guide.to_list_view">
 
+
+
     <ListView
         android:id="@+id/listC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:listSelector="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
         android:paddingBottom="5dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="0dp" />
@@ -24,5 +28,6 @@
         android:background="@color/white"
         android:textAppearance="@android:style/TextAppearance.Material.Menu"
         />
+
 
 </RelativeLayout>

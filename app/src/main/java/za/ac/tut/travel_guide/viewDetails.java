@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.like.LikeButton;
 import com.like.OnLikeListener;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,6 +42,7 @@ public class viewDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_details);
+
         name=(TextView)findViewById(R.id.pNmae);
         disatnce=(TextView)findViewById(R.id.distanceP);
         suburb=(TextView)findViewById(R.id.sSub);
@@ -87,7 +89,7 @@ public class viewDetails extends AppCompatActivity {
         code.setText(split[2]);
         price.setText(getIntent().getExtras().getString("price"));
         disatnce.setText(getIntent().getExtras().getString("distance")+"km");
-        new DownloadImageTask(imageView).execute(getIntent().getExtras().getString("imageurl"));
+        Picasso.get().load(getIntent().getExtras().getString("imageurl")).into(imageView);
 
     }
     public void OnMapView(View v){

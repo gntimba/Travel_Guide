@@ -84,6 +84,7 @@ TextView textView;
                 Intent i = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                 startActivity(i);
             }
+
         };
 
         configure_button();
@@ -144,7 +145,8 @@ TextView textView;
         loc.setMessage("Acquiring GPS");
         loc.setIndeterminate(false);
         loc.show();
-        locationManager.requestLocationUpdates(locationManager.NETWORK_PROVIDER, 5000, 10, listener);
+        locationManager.requestLocationUpdates(locationManager.NETWORK_PROVIDER, 5000 , 10, listener);
+       // locationManager.removeUpdates(listener);
         // this code won't execute IF permissions are not allowed, because in the line above there is return statement.
     }
 
