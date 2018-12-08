@@ -416,9 +416,9 @@ public class backWorker extends AsyncTask<String, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         // if(typ!="profile") {
-        dialog.setMessage(result);
+        //dialog.setMessage(result);
         if (!result.contains("like")) {
-            dialog.show();
+           // dialog.show();
 
             Toast.makeText(ctx, result, Toast.LENGTH_SHORT).show();
         }

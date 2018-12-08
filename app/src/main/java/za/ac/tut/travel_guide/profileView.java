@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import za.ac.tut.travel_guide.util.email;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -26,6 +26,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import za.ac.tut.travel_guide.util.email;
 
 import static za.ac.tut.travel_guide.IP.getIp;
 
@@ -64,7 +66,7 @@ JSONObject jsonObject;
             httpGet sh = new httpGet();
             // Making a request to url and getting response
             String url = getIp()+"profile.php";
-            String jsonStr = sh.makeServiceCall(url,getIntent().getExtras().getString("email"));
+            String jsonStr = sh.makeServiceCall(url, getIntent().getExtras().getString("email"));
 
             Log.e(TAG, "Response from url: " + jsonStr);
             if (jsonStr != null) {

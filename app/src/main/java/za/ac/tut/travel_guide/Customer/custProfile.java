@@ -38,7 +38,7 @@ public class custProfile extends AppCompatActivity {
     TextView Created,dob;
     EditText fname,lname;
     ImageView image;
-    String emails;
+
     Button update;
     private String TAG = custProfile.class.getSimpleName();
     @Override
@@ -178,7 +178,7 @@ public class custProfile extends AppCompatActivity {
                 && Validate.lNameIsValid(lname.getText().toString())
                 &&  !dob.getText().toString().isEmpty())
         {
-            String e_address = emails;
+
             String finame = fname.getText().toString();
             String laname = lname.getText().toString();
             String dateOB = dob.getText().toString();
@@ -186,7 +186,7 @@ public class custProfile extends AppCompatActivity {
             String imageData = encodeTobase64(bitmap);
             String type = "user_update";
             backWorker backgroundWorker = new backWorker(this);
-            backgroundWorker.execute(type, e_address, finame, laname, dateOB,imageData);
+            backgroundWorker.execute(type, email.getEmail(), finame, laname, dateOB,imageData);
             //finish();
         }
     }
