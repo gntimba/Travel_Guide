@@ -1,6 +1,7 @@
 package za.ac.tut.travel_guide;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -95,10 +96,17 @@ public class viewDetails extends AppCompatActivity {
     public void OnMapView(View v){
         String longitude=getIntent().getExtras().getString("longitude");
         String latitude=getIntent().getExtras().getString("latitude");
-        Intent intent =new Intent(viewDetails.this,MapsActivity.class);
+       /* Intent intent =new Intent(viewDetails.this,MapsActivity.class);
         intent.putExtra("latitude",latitude);
         intent.putExtra("longitude",longitude);
-        startActivity(intent);
+        startActivity(intent);*/
+       String locale="google.navigation:q="+latitude+","+longitude;
+        Uri gmmIntentUri = Uri.parse(locale);
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        if (mapIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(mapIntent);
+        }
     }
     public void OnReview(View view){
         Intent intent =new Intent(viewDetails.this,review.class);
