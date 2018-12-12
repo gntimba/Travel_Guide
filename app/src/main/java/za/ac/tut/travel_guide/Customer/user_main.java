@@ -1,8 +1,10 @@
 package za.ac.tut.travel_guide.Customer;
 
 import android.Manifest;
+import android.app.ActivityManager;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -31,6 +33,7 @@ import java.util.HashMap;
 
 import za.ac.tut.travel_guide.IP;
 import za.ac.tut.travel_guide.JSONfunctions;
+import za.ac.tut.travel_guide.MainActivity;
 import za.ac.tut.travel_guide.R;
 import za.ac.tut.travel_guide.util.email;
 
@@ -50,12 +53,23 @@ public class user_main extends AppCompatActivity {
     private LocationListener listener;
     double longitude=0,latitude=0;
 TextView textView;
+    SharedPreferences sp;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Get the view from listview_main.xml
         setContentView(R.layout.activity_user_main);
         email.setEmail(getIntent().getExtras().getString("email"));
+        sp = getSharedPreferences("login",MODE_PRIVATE);
+
+        if(!sp.getBoolean("logged",false)) {
+            sp.edit().putBoolean("logged",true).apply();
+            sp.edit().putString("email",getIntent().getExtras().getString("email")).apply();
+
+        }
+
+
+
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         listener = new LocationListener() {
             @Override
@@ -93,6 +107,8 @@ TextView textView;
         // Execute DownloadJSON AsyncTask
 
     }
+
+
     public void seek(){
         seekBar=(SeekBar)findViewById(R.id.seekBar);
         textView=(TextView) findViewById(R.id.seekView);
@@ -129,6 +145,18 @@ TextView textView;
             default:
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);//***Change Here***
+        startActivity(intent);
+        finish();
+        System.exit(0);
+
     }
 
     void configure_button(){
