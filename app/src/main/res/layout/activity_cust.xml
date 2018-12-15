@@ -152,6 +152,14 @@
                 android:background="#cfea4c88"
                 android:onClick="btnUpdate"
                 android:text="Update Profile" />
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnLogout"
+                android:background="#cfea4c88"
+                android:text="LOGOUT" />
         </TableRow>
 
 

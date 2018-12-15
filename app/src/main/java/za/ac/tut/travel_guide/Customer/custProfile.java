@@ -2,6 +2,7 @@ package za.ac.tut.travel_guide.Customer;
 
 import android.app.DialogFragment;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
@@ -23,6 +24,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import za.ac.tut.travel_guide.DownloadImageTask;
+import za.ac.tut.travel_guide.MainActivity;
 import za.ac.tut.travel_guide.R;
 import za.ac.tut.travel_guide.Validate;
 import za.ac.tut.travel_guide.backWorker;
@@ -39,6 +41,7 @@ import static za.ac.tut.travel_guide.registerActivity.encodeTobase64;
 public class custProfile extends AppCompatActivity {
     TextView Created,dob;
     EditText fname,lname;
+    SharedPreferences sp;
     ImageView image;
 
     Button update;
@@ -46,6 +49,7 @@ public class custProfile extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sp = getSharedPreferences("login",MODE_PRIVATE);
         setContentView(R.layout.activity_cust);
         fname=(EditText)findViewById(R.id.firstName);
         lname=(EditText)findViewById(R.id.lastName);
@@ -145,6 +149,13 @@ public class custProfile extends AppCompatActivity {
            // new DownloadImageTask(image).execute(urlForImage);
             Picasso.get().load(urlForImage).into(image);
         }
+    }
+    public void btnLogout(View view){
+
+        sp.edit().putBoolean("logged",false).apply();
+        sp.edit().putString("email","").apply();
+        Intent i = new Intent(this,MainActivity.class);
+        startActivity(i);
     }
     public void btnDatePicker(View view)
     {
