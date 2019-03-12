@@ -171,6 +171,7 @@ TextView textView;
         loc =new ProgressDialog(user_main.this);
         loc.setTitle("Getting Your Location");
         loc.setMessage("Acquiring GPS");
+        loc.setCancelable(false);
         loc.setIndeterminate(false);
         loc.show();
         locationManager.requestLocationUpdates(locationManager.NETWORK_PROVIDER, 5000 , 10, listener);
@@ -190,6 +191,7 @@ TextView textView;
             mProgressDialog.setTitle("Getting your places");
             // Set progressdialog message
             mProgressDialog.setMessage("Loading...");
+            mProgressDialog.setCancelable(false);
             mProgressDialog.setIndeterminate(false);
             // Show progressdialog
             mProgressDialog.show();
