@@ -417,28 +417,36 @@ public class backWorker extends AsyncTask<String, Void, String> {
     protected void onPostExecute(String result) {
         // if(typ!="profile") {
         //dialog.setMessage(result);
-        if (!result.contains("like")) {
-           // dialog.show();
+        try {
 
-            Toast.makeText(ctx, result, Toast.LENGTH_SHORT).show();
-        }
 
-        if (result.contains("success")) {
-            //Toast.makeText(ctx, email, Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(ctx, profileView.class);
-            intent.putExtra("email", email);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            ctx.getApplicationContext().startActivity(intent);
-        } else if (result.contains("Admin")) {
-            Intent intent = new Intent(ctx, AdminMenu.class);
-            intent.putExtra("email", email);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            ctx.getApplicationContext().startActivity(intent);
-        } else if (result.contains("User")) {
-            Intent intent = new Intent(ctx, user_main.class);
-            intent.putExtra("email", email);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            ctx.getApplicationContext().startActivity(intent);
+            if (!result.contains("like")) {
+                // dialog.show();
+
+                Toast.makeText(ctx, result, Toast.LENGTH_SHORT).show();
+            }
+
+            if (result.contains("success")) {
+                //Toast.makeText(ctx, email, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(ctx, profileView.class);
+                intent.putExtra("email", email);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                ctx.getApplicationContext().startActivity(intent);
+            } else if (result.contains("Admin")) {
+                Intent intent = new Intent(ctx, AdminMenu.class);
+                intent.putExtra("email", email);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                ctx.getApplicationContext().startActivity(intent);
+            } else if (result.contains("User")) {
+                Intent intent = new Intent(ctx, user_main.class);
+                intent.putExtra("email", email);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                ctx.getApplicationContext().startActivity(intent);
+            }
+        }catch (Exception ex)
+        {
+            Toast.makeText(ctx, "please check your internet connection", Toast.LENGTH_SHORT).show();
+            System.out.println(ex.toString());
         }
 
 
