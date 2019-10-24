@@ -9,5 +9,5 @@ public class IP {
         return ip;
     }
 
-    private static final String ip ="http://touristtravelguide.000webhostapp.com/";
+    private static final String ip ="http://alstodt.co.za/api/app/";
 }
